@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <title>Stroke Prediction</title>
+</head>
+
+<body>
+    <div class="alert alert-success alert-dismissible fade show text-center mb-0" role="alert">
+        <strong>Welcome to Stroke Prediction machine</strong> 
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand text-warning" href="#">Stroke Prediction</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#Home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#About Stroke">About Stroke</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#Symptoms">Symptoms</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#Precautions">Precautions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#Emergency services">Emergency services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#Contact us">Contact us</a>
+                    </li>
+
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="IMG/image1.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Stroke prediction</h5>
+              <p>In this project our top priority is to predict patient have stroke or not.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="IMG/image2.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Stroke prediction</h5>
+                <p>“The secret of your success is found in your daily routine.”</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="IMG/image3.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Stroke prediction</h5>
+                <p>"Symptoms of stroke include trouble walking, speaking and understanding, as well as paralysis or numbness of the face, arm or leg."</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <div class="container">
+        <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+            <h2 class="fw-normal">Fill this form to predict stroke.</h2>
+            <p class=" text-muted"><b>"A stroke is your brain’s equivalent of a heart attack, happening when there’s an issue with blood flow to part of your brain. This can happen when blood vessels are blocked or because of bleeding in your brain. Strokes are a life-threatening emergency, and immediate medical attention is critical to prevent permanent damage or death.
+                 Brain cells begin to die in minutes."</b>
+            </p>
+            <p class="text-danger"><b>Welcome to stroke preduction machine</b></p>
+        </div>
+        <div class="container">
+            <form action="/" method="POST">
+                <div class="mb-3">
+                    <label for="exampleInputPassword1"  class="form-label">Gender</label>
+                    <select class="form-select" id="gender" name="gender" aria-label="Default select example">
+                        <option selected>-- select gender --</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Enter age</label>
+                    <input type="text" class="form-control" id="age" name="age" placeholder="Age">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1"  class="form-label">Hypertension</label>
+                    <select class="form-select" id="hypertension" name="hypertension" aria-label="Default select example">
+                        <option selected>-- select Hypertension --</option>
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1"  class="form-label">Heart Disease</label>
+                    <select class="form-select" id="disease" name="disease" aria-label="Default select example">
+                        <option selected>-- select Heart Disease --</option>
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1"  class="form-label">Marrital status</label>
+                    <select class="form-select" id="married" name="married" aria-label="Default select example">
+                        <option selected>--select marrital status --</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1"  class="form-label">work type</label>
+                    <select class="form-select" id="work" name="work" aria-label="Default select example">
+                        <option selected>-- select work type --</option>
+                        <option value="Self-employed">Self-employed</option>
+                        <option value="Private">Private</option>
+                        <option value="children">children</option>
+                        <option value="Govt_job">Government Job</option>
+                        <option value="Never_worked">Never_worked</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1"  class="form-label">Residence Type</label>
+                    <select class="form-select" id="residence" name="residence" aria-label="Default select example">
+                        <option selected>-- Select residence type --</option>
+                        <option value="Urban">Urban</option>
+                        <option value="Rural">Rural</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Enter average glucose level</label>
+                    <input type="text" class="form-control" id="glucose" name="glucose" placeholder="Average Glucose level">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Enter Body Mass Index (BMI)</label>
+                    <input type="text" class="form-control" id="bmi" name="bmi" placeholder="Body Mass Index (BMI)">
+                </div>               
+                <div class="mb-3">
+                    <label for="exampleInputPassword1"  class="form-label">Smoking status</label>
+                    <select class="form-select" id="smoking" name="smoking" aria-label="Default select example">
+                        <option selected value="Unknown">-- Select smoking status if unknown --</option>
+                        <option value="never smoked">never smoked</option>
+                        <option value="formerly smoked">formerly smoked</option>
+                        <option value="smokes">smokes</option>
+                    </select>
+                </div>
+                <div class="text-center"><button type="submit" class="btn btn-primary">Submit</button></div>
+            </form>
+        </div><br><br>
+        <br> <br> <br> <br> </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+
+        <!-- !About Stroke Start -->
+
+        <!-- !About Stroke End -->
+        <section id="About Stroke">
+            <div class="container">
+              <h1 class="text-center">What is a stroke?</h1>
+              <body>
+              </h5>
+              <h5 align="text-center">
+                A stroke is a life-threatening condition that happens when part of your brain doesn’t have enough blood flow. This most commonly happens because of a blocked artery or bleeding in your brain. Without a steady supply of blood, the brain cells in that area start to die from a lack of oxygen.
+                <h3 class="text-warning">What are the types of stroke?</h3>
+              </h5>
+              <h5 align="text-warning">There are two main ways that strokes can happen: ischemia and hemorrhage
+              </h3>
+              <h3 align="text-warning">
+                Ischemic stroke :
+              </h5>
+              <h5 align="text-warning">
+                The most common type of brain stroke is ischemic stroke or brain ischemia that accounts for almost 87% of all the stroke attacks. It’s caused due to blood clot formation in the brain when the blood supply is hindered and brain tissues of a particular area in the brain get damaged. The primary cause of ischemic stroke is due to fatty acid deposits in the lining of the blood vessel walls known as atherosclerosis. 
+              </h5>
+              <h3 align="text-warning">
+                Hemorrhagic stroke :
+              </h5>
+              <h5 align="text-warning">
+                Almost 13 percent of all stroke cases are hemorrhagic stroke. The primary cause of this kind of stroke is due to weakened vessels that rupture leading to increased bleeding surrounding the brain. The blood then accumulates and gets compressed leading to severe tissue damage in the brain.This happens in one of two ways:
+               <p><li>Bleeding inside of your brain (intracerebral). This happens when a blood vessel inside of your brain tears or breaks open, causing bleeding that puts pressure on the surrounding brain tissue.</li></p>
+               <p><li>Bleeding into the subarachnoid space (the space between your brain and its outer covering). The arachnoid membrane, a thin layer of tissue with a spiderweb-like pattern on it, surrounds your brain.</li></p>
+               <div>
+                
+                    <img src="/IMG/card4.webp" class="rounded float-left" alt="..." >
+                    <img src="/IMG/card2.png" class="rounded float-right" alt="..." style="width: 50%;">   
+                            
+            
+              <!-- !Symptoms Start -->
+        <section id="Precautions">
+            <div class="container">
+              <h1 class="text-center">Symptoms</h1>
+              <body>
+              </h5>
+            <h5 align="center-justify">
+                The signs and symptoms of a brain stroke may be subtle or severe, depending upon the severity of the stroke. Before you help the person suffering from a stroke, it is important for 
+                you to know the symptoms of a stroke to look out for.
+            </h5>
+                <h5 align="left">Signs and symptoms of stroke include:
+                <p><li>Trouble speaking and understanding what others are saying. You may experience confusion, slur words or have difficulty understanding speech.</li></p>
+                <p><li>Problems seeing in one or both eyes. You may suddenly have blurred or blackened vision in one or both eyes, or you may see double.</li></p>
+                <p><li>Headache. A sudden, severe headache, which may be accompanied by vomiting, dizziness or altered consciousness, may indicate that you're having a stroke.</li></p>
+                <p><li>Trouble walking. You may stumble or lose your balance. You may also have sudden dizziness or a loss of coordination.</li></p>
+                </h5>
+                <h5 align="left">
+                    Other mild stroke symptoms include the following:
+                <p><li>Lightheadedness or dizziness</li></p> 
+                <p><li>Loss of balance</li></p>   
+                <p><li>Blurred vision, loss of vision or dim vision, especially in one eye</li></p>
+                <p><li>Weakness, tingling or numbness on one side of the body</li></p>
+                <p><li>Persistent Headache</li></p>
+              </body>
+        <!-- !Symptons End -->
+ <!-- !Precautions start -->
+ <section id="Precautions">
+    <div class="container">
+      <h1 class="text-center">Precautions</h1>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card mb-3">
+            <img src="/IMG/card1.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Precautions you should take :</h5>
+              <p class="card-text">
+                <ol>
+                    <li>Get regular physical activity.</li>
+                    <li>Control blood pressure.</li>
+                    <li>Reduce High Cholesterol.</li>
+                    <li>If you smoke, quit.</li>
+                    <li>Eat a Healthy Diet</li>
+                    <li>Keep your blood sugar (glucose) in the normal range.</li>
+                    <li>Get active</li>
+                    </ol>
+              </p>              
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card mb-">
+              <img src="/IMG/card3.webp" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Healthy diet for stroke patients :</h5>
+                <p class="card-text">
+                    <li>Salmon (EPA):Omega-3 unsaturated fats help normalize BDNF (Brain-derived neurotrophic factors) levels and keep the brain’s ability to change</li>
+                    <li>Blueberries (Flavonoids):The flavonoids in blueberries are known to help BDNF (Brain-derived neurotrophic factors)</li>
+                    <li>Pomegranate (Antioxidants):pomegranates are high in cell reinforcements that help protect you from the damage.</li>
+                    <li>Like Nuts and Seeds can take (Vitamin E):Nuts and seeds are a good source of vitamin E, which fights cancer and helps us think better as we get older.</li>
+                    <li>Take Beans (Magnesium):Magnesium protects the brain in a variety of ways when they have a stroke.</li>
+                </p>
+            </div> 
+          </div>
+        </div>
+      </div>
+
+ <!-- !Precautions End -->
+
+ <!-- !Emergency services start -->
+<section id="Emergency services">
+    <div class="container mt-3 contactContent">
+        <h1 class="text-center">Emergency services</h1>
+        <table>
+            <tr>
+              <th>Hospital Name</th>
+              <th>Contact Number</th>
+              <th>Book appointment</th>
+              
+            </tr>
+            <tr>
+              <td>Apollo </td>
+              <td>1066 / +91-80-4668 8098</td>
+              <td><a href="https://www.apollohospitals.com/book-appointment/">Click here for appointment</a></td>
+              
+            </tr>
+            <tr>
+              <td>King George hospital  </td>
+              <td>2564891 / 108</td>
+              
+            </tr>
+            <tr>
+              <td>Medicover Hospital</td>
+              <td> 040-68334455</td>
+              <td><a href="https://www.medicoverhospitals.in/book-an-appointment">Click here for appointment</a></td>
+              
+            </tr>
+            <tr>
+              <td>Sevenhills</td>
+              <td>07996987070</td>
+              <td><a href="https://www.sevenhillshospital.com/bookonline">Click here for appointment</a></td>
+              
+            </tr>
+            <tr>
+                <td>Care hospital</td>
+                <td>0891-6165656</td>
+                <td><a href="https://appointments.carehospitals.com/#/home">Click here for appointment</a></td>
+                
+              </tr>
+            
+            
+              </tr>
+            </table>
+
+<!-- !Emergency services end -->
+
+  <!-- !Contact Start -->
+  <section id="Contact">
+    <div class="container mt-3 contactContent">
+        <h1 class="text-center">Contact us</h1>
+
+        <div class="row mt-4">
+            <div class="col-lg-6">
+                <!-- to edit google map goto https://www.embed-map.com type your location, generate html code and copy the html  -->
+                <div style="max-width:100%;overflow:hidden;color:red;width:500px;height:500px;">
+                    <div id="embedmap-canvas" style="height:100%; width:100%;max-width:100%;">
+                        <iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=Apollo+hospital+jasol,+Jasola+Vihar,+New+Delhi,+Delhi,+India&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8">
+                        </iframe>
+                    </div>
+                    <a class="googlemaps-html" href="https://www.embed-map.com" id="get-data-forembedmap">https://www.embed-map.com</a>
+                    <style>#embedmap-canvas img{max-width:none!important;background:none!important;font-size: inherit;font-weight:inherit;}
+                    </style>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <!-- form fields -->
+                <form>
+                    <input type="text" class="form-control form-control-lg" placeholder="Name">
+                    <input type="email" class="form-control mt-3" placeholder="Email">
+                    <input type="email" class="form-control mt-3" placeholder="Phone No">
+                    <input type="text" class="form-control mt-3" placeholder="Subject">
+                    <div class="mb-3 mt-3">
+                        <textarea class="form-control" rows="5" id="comment" name="text" placeholder="Details"></textarea>
+                    </div>
+                </form>
+                <button type="button" class="btn btn-success mt-3">Contact us</button>
+                
+            </div>
+
+        </div>
+    </div>
+</section>
+
+   <!-- !Contact End-->
+
+ <!-- !Footer Start -->
+ 
+   <!-- !Footer End -->
+
+</body>
+</html>
